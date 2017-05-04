@@ -4,4 +4,4 @@ To implement this project into your program, please edit the files according to 
 
 
 
-I am NOT RESPONSIBLE for any bugs, viruses or any illegal activity caused by this project.
+I am NOT RESPONSIBLE for any bugs, viruses or any illegal activities caused by this project.
