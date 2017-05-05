@@ -16,20 +16,35 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package algorithms.and.data.structures;
+package algorithms.and.data.structures.algorithms.sorting;
 
 /**
  *
  * @author H
  */
-public class AlgorithmsAndDataStructures {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        
-    }
+public class InsertionSort {
     
+    private Object[] array;
+
+    public InsertionSort (Object[] array) {
+        this.array = array;
+    }
+
+    public void sort() {
+        Object key;
+        int j;
+        for(int i = 1; i < array.length; i++) {
+            key = array[i];
+            j = i - 1;
+            while(j > 0 && (int)array[j] > (int)key) {
+                array[j+1] = array[j];
+                j = j - 1;
+            }
+            array[j+1] = key;
+        }
+    }
+
+    public Object[] getArray() {
+        return array;
+    }
 }

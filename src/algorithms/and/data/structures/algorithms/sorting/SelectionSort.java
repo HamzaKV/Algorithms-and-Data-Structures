@@ -16,20 +16,37 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package algorithms.and.data.structures;
+package algorithms.and.data.structures.algorithms.sorting;
 
 /**
  *
  * @author H
  */
-public class AlgorithmsAndDataStructures {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        
-    }
+public class SelectionSort {
     
+    Object[] array;
+    public SelectionSort(Object[] array) {
+        this.array = array;
+    }
+
+    public void sort() {
+        int min;
+        for(int i = 0; i < array.length; i++) {
+            min = i;
+            for(int j = i + 1; j < array.length; j++) {
+                if((int)array[j] < (int)array[min]) {
+                    min = j;
+                }
+            }
+            if(min != i) {
+                Object temp = array[min];
+                array[min] = array[i];
+                array[i] = temp;
+            }
+        }
+    }
+
+    public Object[] getArray() {
+        return array;
+    }
 }

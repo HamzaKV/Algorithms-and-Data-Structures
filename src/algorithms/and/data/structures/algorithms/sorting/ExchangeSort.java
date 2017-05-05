@@ -16,20 +16,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package algorithms.and.data.structures;
+package algorithms.and.data.structures.algorithms.sorting;
 
 /**
  *
  * @author H
  */
-public class AlgorithmsAndDataStructures {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        
-    }
+public class ExchangeSort {
     
+    private Object[] array;
+    public ExchangeSort(Object[] array) {
+        this.array = array;
+    }
+
+    public void sort() {
+        for(int i = 0; i < array.length - 1; i++) {
+            for(int j = i + 1; j < array.length; j++) {
+                if((int)array[i] > (int)array[j]) {
+                    Object temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+    }
+
+    public Object[] getArray() {
+        return array;
+    }
 }

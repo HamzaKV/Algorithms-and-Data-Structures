@@ -16,20 +16,38 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package algorithms.and.data.structures;
+package algorithms.and.data.structures.algorithms.sorting;
 
 /**
  *
  * @author H
  */
-public class AlgorithmsAndDataStructures {
+public class BubbleSort {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        
+    private Object[] array;
+    public BubbleSort(Object[] array) {
+        this.array = array;
     }
-    
+
+    public void sort() {
+        int loop = array.length;
+
+        for(int i = 0; i < loop; i++) {
+            boolean swapped = false;
+            for(int j = 0; j < loop; j++) {
+                if((int)array[j] > (int)array[j + 1]) {
+                    Object temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+            if(!swapped)
+                break;
+        }
+    }
+
+    public Object[] getArray() {
+        return array;
+    }
 }
