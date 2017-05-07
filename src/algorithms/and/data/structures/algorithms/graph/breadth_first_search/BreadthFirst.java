@@ -29,14 +29,13 @@ public class BreadthFirst {
     
     private static final int INFINTY = Integer.MAX_VALUE;
     private Graph graph;
-    private BFSNode[] vertices;
     
     public BreadthFirst(Graph graph) {
         this.graph = graph;
     }
 
     public void graph(int source) {
-        vertices = (BFSNode[])graph.getVertices();
+        BFSNode[] vertices = (BFSNode[])graph.getVertices();
         vertices[source].setColor('G');
         vertices[source].setDistance(0);
         vertices[source].setPred(null);

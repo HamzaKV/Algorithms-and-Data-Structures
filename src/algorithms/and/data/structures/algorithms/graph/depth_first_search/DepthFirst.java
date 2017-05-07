@@ -28,14 +28,13 @@ public class DepthFirst {
     
     private int time;
     private Graph graph;
-    private DFSNode[] vertices;
 
     public DepthFirst(Graph graph) {
         this.graph = graph;
     }
 
     public void graph() {
-        vertices = (DFSNode[])graph.getVertices();
+        DFSNode[] vertices = (DFSNode[])graph.getVertices();
         for(int i = 0; i < vertices.length; i++) {
             vertices[i].setColor('W');
             vertices[i].setPred(null);
