@@ -55,15 +55,4 @@ public class BreadthFirst {
             u.setColor('B');
         }
     }
-
-    public void printPath(BFSNode s, BFSNode v) {
-        if(v.equals(s)) {
-            System.out.println(s.getNumber());
-        } else if(v.getPred() == null) {
-            System.out.println("No path exists from " + s.getNumber() + " to " + v.getNumber() + " exists");
-        } else {
-            printPath(s, (BFSNode)v.getPred());
-            System.out.println(v.getNumber());
-        }
-    }
 }

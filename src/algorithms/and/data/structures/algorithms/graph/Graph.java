@@ -70,4 +70,15 @@ public class Graph {
         }
         return (GraphNode[])adj.toArray();
     }
+    
+    public void printPath(GraphNode s, GraphNode v) {
+        if(v.equals(s)) {
+            System.out.println(s.getNumber());
+        } else if(v.getPred() == null) {
+            System.out.println("No path exists from " + s.getNumber() + " to " + v.getNumber() + " exists");
+        } else {
+            printPath(s, v.getPred());
+            System.out.println(v.getNumber());
+        }
+    }
 }
